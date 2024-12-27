@@ -1,6 +1,9 @@
 
 # Devnot Yazılım Topluluğu Chat Asistanı
 
+![ezgif-7-40236f5ec4](https://github.com/user-attachments/assets/f065fa33-b116-4437-a88b-946b98aa3928)
+
+
 Bu proje, Devnot Yazılım Topluluğu ile ilgili sorulara cevap verebilen bir chat asistanı oluşturmak için geliştirilmiştir. Asistan, kullanıcıların yazılım etkinlikleri, konuşmacılar ve diğer yazılım topluluğu aktiviteleri hakkında bilgi edinmelerini sağlar. Bu sistem, OpenAI API'si kullanarak metin verileriyle embeddingler oluşturur ve sorgulara daha doğru ve hızlı yanıtlar verir.
 
 ## Proje Bileşenleri
