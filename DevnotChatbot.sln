@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevnotChatbot.API", "DevnotChatbot.API\DevnotChatbot.API.csproj", "{27E34510-6A3F-4C0D-9887-CCA902BD7051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevnotChatbot.UI", "DevnotChatbot.UI\DevnotChatbot.UI.csproj", "{A8DEB3D2-9B0F-4121-A6BC-D8F0354733FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27E34510-6A3F-4C0D-9887-CCA902BD7051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E34510-6A3F-4C0D-9887-CCA902BD7051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E34510-6A3F-4C0D-9887-CCA902BD7051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E34510-6A3F-4C0D-9887-CCA902BD7051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DEB3D2-9B0F-4121-A6BC-D8F0354733FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DEB3D2-9B0F-4121-A6BC-D8F0354733FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DEB3D2-9B0F-4121-A6BC-D8F0354733FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DEB3D2-9B0F-4121-A6BC-D8F0354733FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

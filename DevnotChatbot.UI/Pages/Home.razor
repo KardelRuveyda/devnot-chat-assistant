@@ -1,0 +1,17 @@
+﻿@page "/"
+
+@inject NavigationManager Navigation
+
+<PageTitle>Ana Sayfa</PageTitle>
+
+<div class="centered-container">
+    <h1>Size Yardımcı Olmak ve Devnot Yazılım Topluluğu ile ilgili sorularınıza cevap olmak için buradayım!</h1>
+    <button class="mystic-button" @onclick="GoToBot">BAŞLA</button>
+</div>
+
+@code {
+    private void GoToBot()
+    {
+        Navigation.NavigateTo("/chat");
+    }
+}

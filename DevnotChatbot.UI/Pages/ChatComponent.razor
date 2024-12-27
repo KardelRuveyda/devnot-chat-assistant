@@ -1,0 +1,110 @@
+﻿@page "/chat"
+@inject HttpClient Http
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h3>Devnot Chat Asistanı</h3>
+    </div>
+
+    <div class="chat-messages" @ref="messagesContainer">
+        @foreach (var message in chatMessages)
+        {
+            <div class="message @message.Role">
+                <div class="message-icon"></div>
+                <div class="message-content">
+                    @((MarkupString)message.Content)
+                </div>
+            </div>
+        }
+        @if (isLoading)
+        {
+            <div class="message Bot">
+                <div class="message-icon"></div>
+                <div class="message-content">
+                    <div class="spinner-grow custom-spinner" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="chat-input">
+        <textarea @bind="userMessage" placeholder="Nasıl yardımcı olabilirim?" class="input-box"></textarea>
+        <button @onclick="SendMessage" class="send-button">Gönder</button>
+    </div>
+</div>
+
+@code {
+    private string userMessage = string.Empty;
+    private List<ChatMessage> chatMessages = new();
+    private bool isLoading = false;
+
+    private ElementReference messagesContainer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Karşılama mesajını ekle
+        await AddBotMessage("Merhaba! Devnot Yazılım Topluluğu ilgili bir yardım istiyorsanız, size yardımcı olmak için buradayım!");
+        await ScrollToBottom();
+    }
+
+    private async Task AddBotMessage(string message)
+    {
+        chatMessages.Add(new ChatMessage { Role = "Bot", Content = message });
+        await ScrollToBottom();
+    }
+
+    private async Task SendMessage()
+    {
+        // Kullanıcı mesajını hemen temizle
+        var tempMessage = userMessage;
+        userMessage = string.Empty;
+
+        if (!string.IsNullOrWhiteSpace(tempMessage))
+        {
+            // Kullanıcı mesajını ekle
+            chatMessages.Add(new ChatMessage { Role = "User", Content = tempMessage });
+            isLoading = true; // Yüklenme durumu başlar
+            await ScrollToBottom();
+
+            var response = await Http.PostAsJsonAsync("https://localhost:7039/api/devnotbot/interpret", new { Request = tempMessage });
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<List<string>>();
+
+                if (result != null && result.Count > 1)
+                {
+                    isLoading = false; // Yüklenme durumu sona erer
+                    chatMessages.Add(new ChatMessage { Role = "Bot", Content = result[1] });
+                }
+                await ScrollToBottom();
+            }
+        }
+    }
+
+
+    private async Task ScrollToBottom()
+    {
+        try
+        {
+            if (messagesContainer.Context != null)
+            {
+                await messagesContainer.FocusAsync();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Scroll error: {ex.Message}");
+        }
+    }
+
+    // Chat mesajları için model
+    public class ChatMessage
+    {
+        public string Role { get; set; }
+        public string Content { get; set; }
+    }
+}
