@@ -1,0 +1,145 @@
+{
+  "events": [
+    {
+      "name": "Tech Leaders Summit 2025",
+      "registration": {
+        "last_days": 4,
+        "message": "Avantajli fiyatlardan biletinizi almak icin acele edin!"
+      },
+      "details": {
+        "new_speakers": [
+          {
+            "name": "Adem Seker",
+            "position": "Tubitak Bilgem YTE Bolum Yoneticisi"
+          },
+          {
+            "name": "Ilker Altinntas",
+            "position": "Chief Advisor, NIA Technology Advisory"
+          },
+          {
+            "name": "Nilay Azizoglu",
+            "position": "CIO"
+          },
+          {
+            "name": "Taylan G�ney",
+            "position": "CTO, Tom Bank"
+          }
+        ]
+      }
+    },
+    {
+      "name": ".NET 9 Day",
+      "date": "28 Aral�k 2024",
+      "location": "�stanbul",
+      "details": {
+        "topics": [
+          ".NET 9 ve C# 13 ile gelen yenilikler",
+          "G�ncel yaz�l�m teknolojileri"
+        ],
+        "sessions": [
+          {
+            "time": "11:00",
+            "topic": ".NET 9 ve C# 13 ile gelen yenilikler",
+            "speaker": "Bora Kasmer"
+          },
+          {
+            "time": "12:00",
+            "topic": "Deep Dive into AI Innovations with .NET 9 and GitHub Models",
+            "speaker": "Mert Yeter"
+          },
+          {
+            "time": "13:15",
+            "topic": "The official OpenAI library for .NET",
+            "speaker": "Kardel Ruveyda Cetin"
+          },
+          {
+            "time": "14:15",
+            "topic": "Rider for .NET Developers",
+            "speaker": "Abdullah Ilgaz"
+          }
+        ],
+        "speakers": [
+          "Abdullah Ilgaz - Rescap bv",
+          "Bora Kasmer - Keepnet Labs",
+          "Kardel Ruveyda Cetin - Dogus Teknoloji",
+          "Mert Yeter - 360 Lifecycle"
+        ]
+      }
+    },
+    {
+      "name": "Hello Talks",
+      "date": "23 Kasim 2024",
+      "sessions": [
+        {
+          "time": "10:00",
+          "topic": ".NET Aspire � Cloud Native Development for .NET",
+          "speaker": "Berkan �a�maz"
+        },
+        {
+          "time": "10:30",
+          "topic": "Understanding Hexagonal Architecture: A Practical Approach to Clean Code",
+          "speaker": "Ertan Ozdemir"
+        },
+        {
+          "time": "11:00",
+          "topic": "Threadpool Starvation ve Performans Optimizasyonu",
+          "speaker": "Miray Ipekli"
+        },
+        {
+          "time": "11:30",
+          "topic": "Observability with OpenTelemetry",
+          "speakers": [ "Aynur Katircioglu", "Mehmet Emin Ulusoy" ]
+        },
+        {
+          "time": "12:00",
+          "topic": "Sentiment Analysis in .NET",
+          "speaker": "Engincan Veske"
+        },
+        {
+          "time": "12:45",
+          "topic": "The Data Access Duel: Dapper vs. Entity Framework Core",
+          "speaker": "Busra Sarikaya"
+        },
+        {
+          "time": "13:15",
+          "topic": "GitLab API, .NET Template ve Jenkins ile Proje Olu�turma S�re�lerinde: Otomasyon ve Verimlilik",
+          "speaker": "Zafer ��nar"
+        },
+        {
+          "time": "14:45",
+          "topic": "Building a Full Text Search Engine",
+          "speaker": "Yusuf Y�lmaz"
+        },
+        {
+          "time": "15:15",
+          "topic": "Understanding Internals: Implementing HTTP over TCP from Scratch",
+          "speaker": "Onurkan Bakirci"
+        },
+        {
+          "time": "15:45",
+          "topic": "Esnek Gelistirme Sanati: Monolit Uygulamalarda Plug-and-Play Yaklasimi",
+          "speaker": "Yunus Emre Geldegol"
+        }
+      ]
+    },
+    {
+      "name": "Developer Summit 2024",
+      "survey_results": {
+        "participants": 384,
+        "response_rate": "49.2%",
+        "message": "Ankete kat�lanlar�n %49.2'si dahil olmu�, toplam anket verisi 384 ki�iden al�nm��t�r."
+      },
+      "sponsors": [
+        "Midas",
+        "http://Techcareer.net",
+        "Valven"
+      ]
+    }
+  ],
+  "founder": {
+    "name": "U�ur Umutluo�lu",
+    "position": "IT Recruiter, Talentops",
+    "education": "ODTU",
+    "mvp_status": "Hay�r, ancak 2009-2011 y�llar�nda MVP'ydi"
+  }
+}

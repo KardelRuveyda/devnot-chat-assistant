@@ -401,7 +401,4 @@ DevnotChatbot.API/Dataset/
 DevnotChatbot.API/appsettings.json
 DevnotChatbot.API/appsettings.Development.json
 
-*.Dataset
-*.appsettings.json
-*.appsettings.Development.json
-/DevnotChatbot.API/secrets.json
+
